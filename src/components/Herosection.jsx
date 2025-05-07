@@ -1,5 +1,4 @@
-"use client";
-
+import React from "react";
 import { motion } from "framer-motion";
 
 const container = {
@@ -57,10 +56,7 @@ export default function HeroSection() {
         </motion.p>
 
         {/* Rating and Avatars */}
-        <motion.div
-          variants={item}
-          className="flex items-center gap-6"
-        >
+        <motion.div variants={item} className="flex items-center gap-6">
           {/* Rating Column */}
           <div className="flex flex-col items-center gap-2">
             <div className="text-yellow-500 text-3xl">★★★★★</div>
@@ -73,7 +69,7 @@ export default function HeroSection() {
           {/* Divider */}
           <div className="hidden lg:block border-l h-12"></div>
 
-          {/* Avatars – only show on lg+ screens */}
+          {/* Avatars (Only on large screens) */}
           <div className="hidden lg:flex items-center -space-x-3">
             <img
               src="https://tse3.mm.bing.net/th?id=OIP.m8nLaWWFcpDvp5IH70lCJQAAAA&rs=1&pid=ImgDetMain"

@@ -1,7 +1,5 @@
-"use client";
-
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -15,7 +13,6 @@ const fadeUpVariant = {
 export default function WhoWeAreSection() {
   const imageRef = useRef(null);
 
-  // Tilt effect
   const handleMouseMove = (e) => {
     const el = imageRef.current;
     const rect = el.getBoundingClientRect();
@@ -31,7 +28,7 @@ export default function WhoWeAreSection() {
   return (
     <section className="px-6 lg:px-20 py-16 bg-white">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Text Content */}
+        {/* Left Text */}
         <motion.div
           variants={fadeUpVariant}
           initial="hidden"
@@ -55,7 +52,7 @@ export default function WhoWeAreSection() {
           </button>
         </motion.div>
 
-        {/* Image with Tilt Effect */}
+        {/* Right Image with Tilt */}
         <motion.div
           variants={fadeUpVariant}
           initial="hidden"

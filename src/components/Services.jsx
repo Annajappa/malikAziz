@@ -1,7 +1,6 @@
-"use client";
-
+import React from "react";
 import { motion } from "framer-motion";
-import "../stylesmodules/animtedbutton.css"
+import "../stylesmodules/animtedbutton.css"; // Ensure path is correct
 
 const fadeUpVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -60,43 +59,43 @@ export default function Services() {
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      {services.map((service, index) => (
-  <motion.div
-    key={index}
-    variants={fadeUpVariant}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, amount: 0.2 }}
-    className="bg-[#1b171f] rounded-lg overflow-hidden shadow-md transition duration-300 transform hover:scale-[1.02] hover:-translate-y-1 hover:shadow-2xl"
-  >
-    <div className="overflow-hidden">
-      <img
-        src={service.image}
-        alt={service.title}
-        className="w-full h-56 object-cover transform transition-transform duration-500 hover:scale-105"
-      />
-    </div>
-    <div className="p-6 text-white text-center">
-      <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-      <p className="text-sm text-gray-300">{service.description}</p>
-    </div>
-  </motion.div>
-))}
-
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            variants={fadeUpVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="bg-[#1b171f] rounded-lg overflow-hidden shadow-md transition duration-300 transform hover:scale-[1.02] hover:-translate-y-1 hover:shadow-2xl"
+          >
+            <div className="overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-56 object-cover transform transition-transform duration-500 hover:scale-105"
+              />
+            </div>
+            <div className="p-6 text-white text-center">
+              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+              <p className="text-sm text-gray-300">{service.description}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-      <div className="flex justify-center mt-12">
-  <motion.button
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    className="relative group overflow-hidden bg-white text-black border border-black px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-black hover:text-white"
-  >
-    <span className="relative z-10 block group-hover:animate-diagonal-slide">
-      See More →
-    </span>
-  </motion.button>
-</div>
 
+      {/* Animated Button */}
+      <div className="flex justify-center mt-12">
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="relative group overflow-hidden bg-white text-black border border-black px-6 py-3 rounded-full font-semibold transition duration-300 hover:bg-black hover:text-white"
+        >
+          <span className="relative z-10 block group-hover:animate-diagonal-slide">
+            See More →
+          </span>
+        </motion.button>
+      </div>
     </section>
   );
 }

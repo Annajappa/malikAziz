@@ -1,5 +1,4 @@
-"use client";
-
+import React from "react";
 import { motion } from "framer-motion";
 
 const fadeUpVariant = {
@@ -16,7 +15,7 @@ const fadeUpVariant = {
 
 export default function ServicesSection() {
   return (
-    <section className="px-6 lg:px-20 py-16 bg-gradient-to-b from-whit">
+    <section className="px-6 lg:px-20 py-16 bg-gradient-to-b from-white to-lime-50">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
         {/* Left Image - Wider */}
         <motion.div
@@ -47,7 +46,7 @@ export default function ServicesSection() {
             className="w-full h-full object-cover"
           />
 
-          {/* Responsive Overlay Buttons */}
+          {/* Overlay Buttons */}
           <div className="absolute bottom-4 left-4 right-4 flex flex-wrap items-center gap-3">
             {["Investment Management", "Tax Returns", "Audit"].map((label, index) => (
               <span
@@ -58,7 +57,7 @@ export default function ServicesSection() {
               </span>
             ))}
 
-            {/* More Services Button - Same styling for consistency */}
+            {/* More Services Button */}
             <button className="bg-lime-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-lime-500 transition">
               More Services ...
             </button>
