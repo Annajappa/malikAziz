@@ -57,7 +57,7 @@ const Navbar = () => {
             activeLink === 'home' ? 'bg-[#fcf9f9] text-black' : 'text-[#555]'
           }`}
         >
-          About
+          About us
         </Link>
         <div
           className="relative"
