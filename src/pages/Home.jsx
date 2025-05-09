@@ -5,6 +5,9 @@ import WhoWeAreSection from "../components/WhoWeAreSection";
 import Services from "../components/Services";
 import IndustriesSection from "../components/Industriesection";
 import TrustSection from "../components/TrustSection";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import NewsSection from "../components/NewsSections";
+import ContactCTA from "../components/ContactCTA";
 
 
 const Home = () =>{
@@ -17,6 +20,9 @@ const Home = () =>{
         <Services />
         <IndustriesSection />
         <TrustSection />
+        <TestimonialCarousel />
+        <NewsSection />
+        <ContactCTA />
         </>
         
     );
